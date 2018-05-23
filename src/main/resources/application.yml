@@ -1,0 +1,24 @@
+server:
+    port: 8443
+    ssl:
+        key-store: classpath:keystore.p12
+        key-store-password: antonio123A
+        key-store-type: PKCS12
+        key-alias: tomcat
+spring:
+    mvc:
+        favicon:
+        enabled: false
+    resources:
+    add-mappings: false
+    jpa:
+        database: SQL_SERVER
+        hibernate:
+            ddl-auto: none
+            show-sql: true
+    datasource:
+        url: jdbc:sqlserver://localhost:1433;databaseName=ComiteEtica
+        username: sa
+        password: sistemas123
+        platform: mssql
+        driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
